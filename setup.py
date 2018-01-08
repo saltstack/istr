@@ -26,7 +26,7 @@ test_requirements = [
 
 setup(
     name='istr',
-    version='0.9.0',
+    version='1.0.0',
     description="Case-insensitive string implementation.",
     long_description=readme + '\n\n' + history,
     author="Pedro Algarvio",
