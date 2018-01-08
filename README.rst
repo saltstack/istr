@@ -45,8 +45,14 @@ Case-insensitive string implementation based on:
 * https://stackoverflow.com/a/29247821/1258307
 
 
----------------------------------------------
+License
+-------
 * Free software: Apache Software License 2.0
+
+
+Documentetation
+---------------
+
 * Documentation: https://istr.readthedocs.io.
 
 
