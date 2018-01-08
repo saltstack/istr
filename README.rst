@@ -50,16 +50,11 @@ License
 * Free software: Apache Software License 2.0
 
 
-Documentetation
----------------
+Documentation
+-------------
 
-* Documentation: https://istr.readthedocs.io.
+* https://istr.readthedocs.io.
 
-
-Features
---------
-
-* Case insensitive string operations
 
 Credits
 ---------
