@@ -39,10 +39,13 @@ istr
     :target: https://pypi.python.org/pypi/istr
 
 
-Case-insensitive string implementation based on https://code.activestate.com/recipes/194371/
-and https://stackoverflow.com/a/29247821/1258307
+Case-insensitive string implementation based on:
+
+* https://code.activestate.com/recipes/194371/
+* https://stackoverflow.com/a/29247821/1258307
 
 
+---------------------------------------------
 * Free software: Apache Software License 2.0
 * Documentation: https://istr.readthedocs.io.
 
