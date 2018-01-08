@@ -6,14 +6,6 @@ istr
 .. image:: https://img.shields.io/travis/saltstack/istr.svg
         :target: https://travis-ci.org/saltstack/istr
 
-.. image:: https://readthedocs.org/projects/istr/badge/?version=latest
-        :target: https://istr.readthedocs.io/en/latest/?badge=latest
-        :alt: Documentation Status
-
-.. image:: https://pyup.io/repos/github/saltstack/istr/shield.svg
-     :target: https://pyup.io/repos/github/saltstack/istr/
-     :alt: Updates
-
 .. image:: https://ci.appveyor.com/api/projects/status/github/saltstack/istr?branch=master&svg=true
     :target: https://ci.appveyor.com/project/saltstack-public/istr/branch/master
     :alt: See Build Status on AppVeyor
@@ -21,6 +13,14 @@ istr
 .. image:: https://codecov.io/github/saltstack/istr/coverage.svg?branch=master
     :target: https://codecov.io/github/saltstack/istr?branch=master
     :alt: Code Coverage
+
+.. image:: https://readthedocs.org/projects/istr/badge/?version=latest
+        :target: https://istr.readthedocs.io/en/latest/?badge=latest
+        :alt: Documentation Status
+
+.. image:: https://pyup.io/repos/github/saltstack/istr/shield.svg
+     :target: https://pyup.io/repos/github/saltstack/istr/
+     :alt: Updates
 
 .. image:: https://img.shields.io/pypi/v/istr.svg?style=flat
     :alt: PyPI Package latest release
