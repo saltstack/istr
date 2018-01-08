@@ -53,7 +53,7 @@ and https://stackoverflow.com/a/29247821/1258307
 Features
 --------
 
-* TODO
+* Case insensitive string operations
 
 Credits
 ---------
