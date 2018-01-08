@@ -3,9 +3,6 @@ istr
 ====
 
 
-.. image:: https://img.shields.io/pypi/v/istr.svg
-        :target: https://pypi.python.org/pypi/istr
-
 .. image:: https://img.shields.io/travis/saltstack/istr.svg
         :target: https://travis-ci.org/saltstack/istr
 
