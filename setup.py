@@ -32,7 +32,7 @@ setup(
     author="Pedro Algarvio",
     author_email='pedro@algarvio.me',
     url='https://github.com/saltstack/istr',
-    py_modules=['src/istr'],
+    packages=['istr'],
     install_requires=requirements,
     license="Apache Software License 2.0",
     zip_safe=False,

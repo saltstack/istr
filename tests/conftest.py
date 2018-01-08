@@ -8,10 +8,7 @@
 import os
 import sys
 
-CODE_ROOT = os.path.join(
-    os.path.abspath(os.path.dirname(os.path.dirname(__file__))),
-    'src'
-)
+CODE_ROOT = os.path.dirname(os.path.dirname(__file__))
 if CODE_ROOT in sys.path:
     sys.path.remove(CODE_ROOT)
 sys.path.insert(0, CODE_ROOT)
