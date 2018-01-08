@@ -31,5 +31,5 @@ artifacts:
   - path: dist\*
 
 on_success:
-  - "%PYTHON%/Scripts/coverage report"
+  - "%PYTHON%/Scripts/coverage xml"
   - "%PYTHON%/Scripts/codecov"
