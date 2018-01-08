@@ -29,10 +29,6 @@ istr
     :alt: PyPI Package latest release
     :target: https://pypi.python.org/pypi/istr
 
-.. image:: https://img.shields.io/pypi/dm/istr.svg?style=flat
-    :alt: PyPI Package monthly downloads
-    :target: https://pypi.python.org/pypi/istr
-
 .. image:: https://img.shields.io/pypi/wheel/istr.svg?style=flat
     :alt: PyPI Wheel
     :target: https://pypi.python.org/pypi/istr
