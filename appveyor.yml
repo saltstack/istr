@@ -15,6 +15,7 @@ init:
 
 install:
   - "%PYTHON%/Scripts/easy_install -U pip"
+  - "%PYTHON%/Scripts/pip install -U codecov"
   - "%PYTHON%/Scripts/pip install -r requirement-dev.txt"
 
 build: false  # Not a C# project, build stuff at the test step instead.
@@ -31,3 +32,4 @@ artifacts:
 
 on_success:
   - "%PYTHON%/Scripts/coverage report"
+  - "%PYTHON%/Scripts/codecov"
