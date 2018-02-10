@@ -10,7 +10,7 @@ babel==2.5.3              # via sphinx
 certifi==2018.1.18        # via requests
 chardet==3.0.4            # via requests
 configparser==3.5.0       # via flake8
-coverage==4.5
+coverage==4.5.1
 docutils==0.14            # via sphinx
 enum34==1.1.6             # via flake8
 faker==0.8.10
