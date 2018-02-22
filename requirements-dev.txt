@@ -36,7 +36,7 @@ six==1.11.0               # via faker, pytest, python-dateutil, sphinx, tox
 snowballstemmer==1.2.1    # via sphinx
 Sphinx==1.6.7
 sphinxcontrib-websupport==1.0.1  # via sphinx
-text-unidecode==1.1       # via faker
+text-unidecode==1.2       # via faker
 tox==2.9.1
 typing==3.6.4             # via sphinx
 urllib3==1.22             # via requests
