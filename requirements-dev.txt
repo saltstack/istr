@@ -30,7 +30,7 @@ Pygments==2.2.0           # via sphinx
 pytest-runner==3.0
 pytest==3.4.0
 python-dateutil==2.6.1    # via faker
-pytz==2017.3              # via babel
+pytz==2018.4              # via babel
 requests==2.18.4          # via sphinx
 six==1.11.0               # via faker, pytest, python-dateutil, sphinx, tox
 snowballstemmer==1.2.1    # via sphinx
