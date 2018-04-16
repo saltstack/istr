@@ -7,7 +7,7 @@
 alabaster==0.7.10         # via sphinx
 attrs==17.4.0             # via pytest
 babel==2.5.3              # via sphinx
-certifi==2018.1.18        # via requests
+certifi==2018.4.16        # via requests
 chardet==3.0.4            # via requests
 configparser==3.5.0       # via flake8
 coverage==4.5
