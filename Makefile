@@ -85,3 +85,38 @@ dist: clean ## builds source and wheel package
 
 install: clean ## install the package to the active Python's site-packages
 	python setup.py install
+
+
+PIP_TOOLS_VERSION=2.0.2
+
+upgrade-requirements-files:
+	pip install 'pip-tools==$(PIP_TOOLS_VERSION)' && \
+		for reqfile in $$(find $(CURDIR) -maxdepth 3 -name 'requirements*.in' -print); do \
+			reqfile=$$(realpath --relative-to=$(CURDIR) $$reqfile); \
+			final_reqfile="$${reqfile%.*}.txt";\
+			echo "Compiling $$reqfile to $$final_reqfile"; \
+			pip-compile -U --output-file $$final_reqfile $$reqfile; done
+
+
+compile-requirements-files:
+	pip install 'pip-tools==$(PIP_TOOLS_VERSION)' && \
+		for reqfile in $$(find $(CURDIR) -maxdepth 3 -name 'requirements*.in' -print); do \
+			reqfile=$$(realpath --relative-to=$(CURDIR) $$reqfile); \
+			final_reqfile="$${reqfile%.*}.txt";\
+			echo "Compiling $$reqfile to $$final_reqfile"; \
+			pip-compile --output-file $$final_reqfile $$reqfile; done
+
+sync-installed-pip-requirements:
+	pip install 'pip-tools==$(PIP_TOOLS_VERSION)' && \
+		reqs=""; for reqfile in $$(find $(CURDIR) -maxdepth 3 -name 'requirements*.txt' -not -name '*-py2.txt' -print); do \
+			reqfile=$$(realpath --relative-to=$(CURDIR) $$reqfile); \
+			reqs="$$reqs $$reqfile"; done; \
+			pip-sync $$reqs
+
+upgrade-pip-requirement:
+	pip install 'pip-tools==$(PIP_TOOLS_VERSION)' && \
+		for reqfile in $$(find $(CURDIR) -maxdepth 3 -name 'requirements*.in' -not -name '*-py2.in' -print); do \
+			reqfile=$$(realpath --relative-to=$(CURDIR) $$reqfile); \
+			final_reqfile="$${reqfile%.*}.txt";\
+			echo "Upgrading $(req) in $$final_reqfile"; \
+			pip-compile --output-file $$final_reqfile $$reqfile -P $(req); done
