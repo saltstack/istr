@@ -11,7 +11,7 @@ certifi==2018.4.16        # via requests
 chardet==3.0.4            # via requests
 coverage==4.5.1
 docutils==0.14            # via sphinx
-faker==0.8.13
+faker==0.8.14
 flake8==3.5.0
 idna==2.6                 # via requests
 imagesize==1.0.0          # via sphinx
