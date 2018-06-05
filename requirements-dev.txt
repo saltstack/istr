@@ -35,7 +35,7 @@ requests==2.18.4          # via sphinx
 six==1.11.0               # via faker, more-itertools, packaging, pytest, python-dateutil, sphinx, tox
 snowballstemmer==1.2.1    # via sphinx
 sphinx==1.7.5
-sphinxcontrib-websupport==1.0.1  # via sphinx
+sphinxcontrib-websupport==1.1.0  # via sphinx
 text-unidecode==1.2       # via faker
 tox==3.0.0
 urllib3==1.22             # via requests
