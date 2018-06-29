@@ -30,7 +30,7 @@ pyparsing==2.2.0          # via packaging
 pytest-runner==4.2
 pytest==3.6.0
 python-dateutil==2.7.2    # via faker
-pytz==2018.4              # via babel
+pytz==2018.5              # via babel
 requests==2.18.4          # via sphinx
 six==1.11.0               # via faker, more-itertools, packaging, pytest, python-dateutil, sphinx, tox
 snowballstemmer==1.2.1    # via sphinx
