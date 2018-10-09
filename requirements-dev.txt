@@ -38,6 +38,6 @@ sphinx==1.7.8
 sphinxcontrib-websupport==1.0.1  # via sphinx
 text-unidecode==1.2       # via faker
 tox==3.4.0
-urllib3==1.22             # via requests
+urllib3==1.23             # via requests
 virtualenv==15.2.0        # via tox
 wheel==0.32.0
