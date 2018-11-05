@@ -5,7 +5,7 @@
 #    pip-compile --output-file requirements-dev.txt requirements-dev.in
 #
 alabaster==0.7.12         # via sphinx
-atomicwrites==1.2.0       # via pytest
+atomicwrites==1.2.1       # via pytest
 attrs==18.1.0             # via pytest
 babel==2.5.3              # via sphinx
 certifi==2018.10.15        # via requests
