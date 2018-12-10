@@ -31,7 +31,7 @@ pytest-runner==4.2
 pytest==4.0.1
 python-dateutil==2.7.5    # via faker
 pytz==2018.7              # via babel
-requests==2.20.1          # via sphinx
+requests==2.21.0          # via sphinx
 six==1.11.0               # via faker, more-itertools, packaging, pytest, python-dateutil, sphinx, tox
 snowballstemmer==1.2.1    # via sphinx
 sphinx==1.8.2
