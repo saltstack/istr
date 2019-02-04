@@ -14,7 +14,7 @@ coverage==4.5.2
 docutils==0.14            # via sphinx
 faker==1.0.2
 flake8==3.7.5
-idna==2.7                 # via requests
+idna==2.8                 # via requests
 imagesize==1.1.0          # via sphinx
 jinja2==2.10              # via sphinx
 markupsafe==1.1.0           # via jinja2
