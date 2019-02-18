@@ -23,7 +23,7 @@ more-itertools==6.0.0     # via pytest
 packaging==19.0           # via sphinx
 pluggy==0.8.1             # via pytest, tox
 py==1.7.0                 # via pytest, tox
-pycodestyle==2.4.0        # via flake8
+pycodestyle==2.5.0        # via flake8
 pyflakes==2.0.0           # via flake8
 pygments==2.2.0           # via sphinx
 pyparsing==2.3.0          # via packaging
