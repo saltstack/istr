@@ -40,4 +40,4 @@ text-unidecode==1.2       # via faker
 tox==3.11.1
 urllib3==1.25.2             # via requests
 virtualenv==16.6.0        # via tox
-wheel==0.33.1
+wheel==0.33.4
