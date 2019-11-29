@@ -37,7 +37,7 @@ class istr(str):  # pylint: disable=invalid-name
                 self.__normalized = text.casefold()
             except UnicodeEncodeError:
                 # Text contains characters not in the ascii range
-                self.__normalized = unicodedata.normalize('NFKD',
+                self.__normalized = unicodedata.normalize('NFKC',
                                                           text.casefold())
         return self.__normalized
 
