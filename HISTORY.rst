@@ -7,7 +7,7 @@ History
 
 * Fixed upgrading of pip in tox.ini to use 'python -m pip install' so it can
   work on Windows.
-
+* Added support for Python 3.6, 3.7, 3.8.
 
 1.0.1 (2018-01-08)
 --------------------
