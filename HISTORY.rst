@@ -2,7 +2,10 @@
 History
 =======
 
-1.x.x (2019-xx-xx)
+1.x.x (2020-xx-xx)
+--------------------
+
+1.x.x (2020-02-17)
 --------------------
 
 * Fixed upgrading of pip in tox.ini to use 'python -m pip install' so it can
