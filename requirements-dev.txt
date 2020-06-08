@@ -34,7 +34,7 @@ pytz==2020.1              # via babel
 requests==2.23.0          # via sphinx
 six==1.15.0               # via faker, more-itertools, packaging, pytest, python-dateutil, sphinx, tox
 snowballstemmer==2.0.0    # via sphinx
-sphinx==2.4.0
+sphinx==3.1.0
 sphinxcontrib-websupport==1.2.0  # via sphinx
 text-unidecode==1.3       # via faker
 tox==3.14.3
