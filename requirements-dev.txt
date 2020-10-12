@@ -16,7 +16,7 @@ faker==4.9.0
 flake8==3.8.4
 idna==2.10                 # via requests
 imagesize==1.2.0          # via sphinx
-jinja2==2.11.1              # via sphinx
+jinja2==2.11.2              # via sphinx
 markupsafe==1.1.1           # via jinja2
 mccabe==0.6.1             # via flake8
 more-itertools==8.2.0     # via pytest
