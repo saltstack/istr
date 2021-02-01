@@ -13,7 +13,7 @@ chardet==4.0.0            # via requests
 coverage==5.4
 docutils==0.16            # via sphinx
 faker==5.8.0
-flake8==3.7.9
+flake8==3.8.4
 idna==2.8                 # via requests
 imagesize==1.2.0          # via sphinx
 jinja2==2.11.1              # via sphinx
