@@ -11,7 +11,7 @@ babel==2.9.0              # via sphinx
 certifi==2020.12.5        # via requests
 chardet==4.0.0            # via requests
 coverage==5.5
-docutils==0.16            # via sphinx
+docutils==0.17.1            # via sphinx
 faker==4.0.0
 flake8==3.7.9
 idna==2.8                 # via requests
