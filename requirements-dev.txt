@@ -29,7 +29,7 @@ pygments==2.10.0           # via sphinx
 pyparsing==3.0.4          # via packaging
 pytest-runner==5.3.1
 pytest==6.2.5
-python-dateutil==2.8.1    # via faker
+python-dateutil==2.8.2    # via faker
 pytz==2021.1              # via babel
 requests==2.25.1          # via sphinx
 six==1.15.0               # via faker, more-itertools, packaging, pytest, python-dateutil, sphinx, tox
