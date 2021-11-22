@@ -12,7 +12,7 @@ certifi==2021.10.8        # via requests
 chardet==4.0.0            # via requests
 coverage==6.1.2
 docutils==0.18            # via sphinx
-faker==8.1.0
+faker==9.8.2
 flake8==3.9.1
 idna==3.1                 # via requests
 imagesize==1.2.0          # via sphinx
