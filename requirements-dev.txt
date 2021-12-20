@@ -26,7 +26,7 @@ py==1.11.0                 # via pytest, tox
 pycodestyle==2.8.0        # via flake8
 pyflakes==2.4.0           # via flake8
 pygments==2.10.0           # via sphinx
-pyparsing==2.4.7          # via packaging
+pyparsing==3.0.6          # via packaging
 pytest-runner==5.3.0
 pytest==6.2.3
 python-dateutil==2.8.1    # via faker
