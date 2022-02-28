@@ -28,7 +28,7 @@ pyflakes==2.4.0           # via flake8
 pygments==2.11.2           # via sphinx
 pyparsing==3.0.7          # via packaging
 pytest-runner==6.0.0
-pytest==6.2.3
+pytest==7.0.1
 python-dateutil==2.8.1    # via faker
 pytz==2021.1              # via babel
 requests==2.25.1          # via sphinx
