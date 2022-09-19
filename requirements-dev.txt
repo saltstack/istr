@@ -8,7 +8,7 @@ alabaster==0.7.12         # via sphinx
 atomicwrites==1.4.1       # via pytest
 attrs==22.1.0             # via pytest
 babel==2.10.3              # via sphinx
-certifi==2021.10.8        # via requests
+certifi==2022.9.14        # via requests
 chardet==4.0.0            # via requests
 coverage==6.3.3
 docutils==0.18.1            # via sphinx
