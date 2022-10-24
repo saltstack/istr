@@ -6,7 +6,7 @@
 #
 alabaster==0.7.12         # via sphinx
 atomicwrites==1.4.1       # via pytest
-attrs==21.4.0             # via pytest
+attrs==22.1.0             # via pytest
 babel==2.10.1              # via sphinx
 certifi==2021.10.8        # via requests
 chardet==4.0.0            # via requests
