@@ -9,7 +9,7 @@ atomicwrites==1.4.1       # via pytest
 attrs==22.1.0             # via pytest
 babel==2.11.0              # via sphinx
 certifi==2022.12.7        # via requests
-chardet==5.0.0            # via requests
+chardet==5.1.0            # via requests
 coverage==6.5.0
 docutils==0.19            # via sphinx
 faker==15.3.3
