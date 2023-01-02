@@ -39,5 +39,5 @@ sphinxcontrib-websupport==1.2.4  # via sphinx
 text-unidecode==1.3       # via faker
 tox==4.1.2
 urllib3==1.26.13             # via requests
-virtualenv==20.17.0        # via tox
+virtualenv==20.17.1        # via tox
 wheel==0.38.4
