@@ -10,7 +10,7 @@ attrs==22.2.0             # via pytest
 babel==2.11.0              # via sphinx
 certifi==2022.12.7        # via requests
 chardet==5.1.0            # via requests
-coverage==6.5.0
+coverage==7.0.4
 docutils==0.19            # via sphinx
 faker==15.3.3
 flake8==6.0.0
