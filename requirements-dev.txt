@@ -17,7 +17,7 @@ flake8==6.0.0
 idna==3.4                 # via requests
 imagesize==1.4.1          # via sphinx
 jinja2==3.1.2              # via sphinx
-markupsafe==2.1.1           # via jinja2
+markupsafe==2.1.2           # via jinja2
 mccabe==0.7.0             # via flake8
 more-itertools==9.0.0     # via pytest
 packaging==23.0           # via sphinx
