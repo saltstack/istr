@@ -20,7 +20,7 @@ jinja2==3.1.2              # via sphinx
 markupsafe==2.1.2           # via jinja2
 mccabe==0.7.0             # via flake8
 more-itertools==9.1.0     # via pytest
-packaging==23.0           # via sphinx
+packaging==23.1           # via sphinx
 pluggy==1.0.0             # via pytest, tox
 py==1.11.0                 # via pytest, tox
 pycodestyle==2.10.0        # via flake8
