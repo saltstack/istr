@@ -11,7 +11,7 @@ babel==2.12.1              # via sphinx
 certifi==2023.5.7        # via requests
 chardet==5.1.0            # via requests
 coverage==7.2.5
-docutils==0.19            # via sphinx
+docutils==0.20            # via sphinx
 faker==16.4.0
 flake8==6.0.0
 idna==3.4                 # via requests
