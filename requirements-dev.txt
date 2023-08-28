@@ -24,7 +24,7 @@ packaging==23.1           # via sphinx
 pluggy==1.3.0             # via pytest, tox
 py==1.11.0                 # via pytest, tox
 pycodestyle==2.11.0        # via flake8
-pyflakes==3.0.1           # via flake8
+pyflakes==3.1.0           # via flake8
 pygments==2.15.1           # via sphinx
 pyparsing==3.1.0          # via packaging
 pytest-runner==6.0.0
