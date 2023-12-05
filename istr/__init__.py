@@ -45,77 +45,74 @@ class istr(str):  # pylint: disable=invalid-name
         return 'istr({})'.format(super().__repr__())
 
     def __eq__(self, other):
-        if not isinstance(other, istr):
-            other = istr(other)
-        return self.normalized == other.normalized
+        try:
+            return self.normalized == self._normalize(other)
+        except TypeError:
+            return NotImplemented
 
     def __lt__(self, other):
-        if not isinstance(other, istr):
-            other = istr(other)
-        return self.normalized < other.normalized
+        try:
+            return self.normalized < self._normalize(other)
+        except TypeError:
+            return NotImplemented
 
     def __le__(self, other):
-        if not isinstance(other, istr):
-            other = istr(other)
-        return self.normalized <= other.normalized
+        try:
+            return self.normalized <= self._normalize(other)
+        except TypeError:
+            return NotImplemented
 
     def __gt__(self, other):
-        if not isinstance(other, istr):
-            other = istr(other)
-        return self.normalized > other.normalized
+        try:
+            return self.normalized > self._normalize(other)
+        except TypeError:
+            return NotImplemented
 
     def __ne__(self, other):
-        if not isinstance(other, istr):
-            other = istr(other)
-        return self.normalized != other.normalized
+        try:
+            return self.normalized != self._normalize(other)
+        except TypeError:
+            return NotImplemented
 
     def __ge__(self, other):
-        if not isinstance(other, istr):
-            other = istr(other)
-        return self.normalized >= other.normalized
+        try:
+            return self.normalized >= self._normalize(other)
+        except TypeError:
+            return NotImplemented
 
     def __hash__(self):
         return hash(self.normalized)
 
     def __contains__(self, other):
-        if not isinstance(other, istr):
-            other = istr(other)
-        return other.normalized in self.normalized
+        return self._normalize(other) in self.normalized
 
     def count(self, other, *args):  # pylint: disable=arguments-differ
-        if not isinstance(other, istr):
-            other = istr(other)
-        return str.count(self.normalized, other.normalized, *args)
+        return str.count(self.normalized, self._normalize(other), *args)
 
     def endswith(self, other, *args):
-        if not isinstance(other, istr):
-            other = istr(other)
-        return str.endswith(self.normalized, other.normalized, *args)
+        return str.endswith(self.normalized, self._normalize(other), *args)
 
     def find(self, other, *args):  # pylint: disable=arguments-differ
-        if not isinstance(other, istr):
-            other = istr(other)
-        return str.find(self.normalized, other.normalized, *args)
+        return str.find(self.normalized, self._normalize(other), *args)
 
     def index(self, other, *args):  # pylint: disable=arguments-differ
-        if not isinstance(other, istr):
-            other = istr(other)
-        return str.index(self.normalized, other.normalized, *args)
+        return str.index(self.normalized, self._normalize(other), *args)
 
     def rfind(self, other, *args):
-        if not isinstance(other, istr):
-            other = istr(other)
-        return str.rfind(self.normalized, other.normalized, *args)
+        return str.rfind(self.normalized, self._normalize(other), *args)
 
     def rindex(self, other, *args):
-        if not isinstance(other, istr):
-            other = istr(other)
-        return str.rindex(self.normalized, other.normalized, *args)
+        return str.rindex(self.normalized, self._normalize(other), *args)
 
     def startswith(self, other, *args):
-        if not isinstance(other, istr):
-            other = istr(other)
-        return str.startswith(self.normalized, other.normalized, *args)
+        return str.startswith(self.normalized, self._normalize(other), *args)
 
     def casefold(self):
         return self.normalized.casefold()
+
+    def _normalize(self, obj):
+        if isinstance(obj, istr):
+            return obj.normalized
+        if isinstance(obj, str):
+            return self.__class__(obj).normalized
+        raise TypeError(f"Argument must be str, not {type(obj)}")
