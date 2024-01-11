@@ -116,7 +116,7 @@ def test_repr(sample):
     assert repr(istr(text)) == "istr({})".format(repr(text))
 
 
-def test_eq_equal(sample, non_strings):
+def test_eq_equal(sample):
     original, munged = sample
     if LOG_STRINGS:
         try:
@@ -126,8 +126,6 @@ def test_eq_equal(sample, non_strings):
             pass
     assert istr(original) == munged
     assert istr(original) == istr(munged)
-    for non_string in non_strings:
-        assert not istr(original) == non_string
 
 
 def test_eq_different(two_samples, non_strings):
@@ -144,7 +142,7 @@ def test_eq_different(two_samples, non_strings):
         assert not istr(original1) == non_string
 
 
-def test_ne_equal(sample, non_strings):
+def test_ne_equal(sample):
     original, munged = sample
     if LOG_STRINGS:
         try:
@@ -154,8 +152,6 @@ def test_ne_equal(sample, non_strings):
             pass
     assert not istr(original) != munged
     assert not istr(original) != istr(munged)
-    for non_string in non_strings:
-        assert istr(original) != non_string
 
 
 def test_ne_different(two_samples, non_strings):
