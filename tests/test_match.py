@@ -106,6 +106,11 @@ def two_samples(faker):
     return original1, munged1, original2, munged2
 
 
+@pytest.fixture
+def non_strings():
+    return None, True, 2, 3.1, [], (), {}, set()
+
+
 def test_repr(sample):
     text, _ = sample
     assert repr(istr(text)) == "istr({})".format(repr(text))
@@ -123,7 +128,7 @@ def test_eq_equal(sample):
     assert istr(original) == istr(munged)
 
 
-def test_eq_different(two_samples):
+def test_eq_different(two_samples, non_strings):
     original1, _, _, munged2 = two_samples
     if LOG_STRINGS:
         try:
@@ -133,6 +138,8 @@ def test_eq_different(two_samples):
             pass
     assert not istr(original1) == munged2
     assert not istr(original1) == istr(munged2)
+    for non_string in non_strings:
+        assert not istr(original1) == non_string
 
 
 def test_ne_equal(sample):
@@ -147,7 +154,7 @@ def test_ne_equal(sample):
     assert not istr(original) != istr(munged)
 
 
-def test_ne_different(two_samples):
+def test_ne_different(two_samples, non_strings):
     original1, _, _, munged2 = two_samples
     if LOG_STRINGS:
         try:
@@ -157,9 +164,11 @@ def test_ne_different(two_samples):
             pass
     assert istr(original1) != munged2
     assert istr(original1) != istr(munged2)
+    for non_string in non_strings:
+        assert istr(original1) != non_string
 
 
-def test_lt(two_samples):
+def test_lt(two_samples, non_strings):
     original1, munged1, original2, munged2 = two_samples
     is_1_less = original1.casefold() < original2.casefold()
     if is_1_less:
@@ -171,6 +180,9 @@ def test_lt(two_samples):
                 pass
         assert istr(original1) < munged2
         assert istr(original1) < istr(munged2)
+        for non_string in non_strings:
+            with pytest.raises(TypeError):
+                istr(original1) < non_string
     else:
         if LOG_STRINGS:
             try:
@@ -180,9 +192,12 @@ def test_lt(two_samples):
                 pass
         assert istr(original2) < munged1
         assert istr(original2) < istr(munged1)
+        for non_string in non_strings:
+            with pytest.raises(TypeError):
+                istr(original2) < non_string
 
 
-def test_le_different(two_samples):
+def test_le_different(two_samples, non_strings):
     original1, munged1, original2, munged2 = two_samples
     is_1_less = original1.casefold() < original2.casefold()
     if is_1_less:
@@ -194,6 +209,9 @@ def test_le_different(two_samples):
                 pass
         assert istr(original1) <= munged2
         assert istr(original1) <= istr(munged2)
+        for non_string in non_strings:
+            with pytest.raises(TypeError):
+                istr(original1) <= non_string
     else:
         if LOG_STRINGS:
             try:
@@ -203,9 +221,12 @@ def test_le_different(two_samples):
                 pass
         assert istr(original2) <= munged1
         assert istr(original2) <= istr(munged1)
+        for non_string in non_strings:
+            with pytest.raises(TypeError):
+                istr(original2) <= non_string
 
 
-def test_le_equal(sample):
+def test_le_equal(sample, non_strings):
     original, munged = sample
     if LOG_STRINGS:
         try:
@@ -215,9 +236,12 @@ def test_le_equal(sample):
             pass
     assert istr(original) <= munged
     assert istr(original) <= istr(munged)
+    for non_string in non_strings:
+        with pytest.raises(TypeError):
+            istr(original) <= non_string
 
 
-def test_gt(two_samples):
+def test_gt(two_samples, non_strings):
     original1, munged1, original2, munged2 = two_samples
     is_1_greater = original1.casefold() > original2.casefold()
     if is_1_greater:
@@ -229,6 +253,9 @@ def test_gt(two_samples):
                 pass
         assert istr(original1) > munged2
         assert istr(original1) > istr(munged2)
+        for non_string in non_strings:
+            with pytest.raises(TypeError):
+                istr(original1) > non_string
     else:
         if LOG_STRINGS:
             try:
@@ -238,9 +265,12 @@ def test_gt(two_samples):
                 pass
         assert istr(original2) > munged1
         assert istr(original2) > istr(munged1)
+        for non_string in non_strings:
+            with pytest.raises(TypeError):
+                istr(original2) > non_string
 
 
-def test_ge_different(two_samples):
+def test_ge_different(two_samples, non_strings):
     original1, munged1, original2, munged2 = two_samples
     is_1_greater = original1.casefold() > original2.casefold()
     if is_1_greater:
@@ -252,6 +282,9 @@ def test_ge_different(two_samples):
                 pass
         assert istr(original1) >= munged2
         assert istr(original1) >= istr(munged2)
+        for non_string in non_strings:
+            with pytest.raises(TypeError):
+                istr(original1) >= non_string
     else:
         if LOG_STRINGS:
             try:
@@ -261,9 +294,12 @@ def test_ge_different(two_samples):
                 pass
         assert istr(original2) >= munged1
         assert istr(original2) >= istr(munged1)
+        for non_string in non_strings:
+            with pytest.raises(TypeError):
+                istr(original2) >= non_string
 
 
-def test_ge_equal(sample):
+def test_ge_equal(sample, non_strings):
     original, munged = sample
     if LOG_STRINGS:
         try:
@@ -273,6 +309,9 @@ def test_ge_equal(sample):
             pass
     assert istr(original) >= munged
     assert istr(original) >= istr(munged)
+    for non_string in non_strings:
+        with pytest.raises(TypeError):
+            istr(original) >= non_string
 
 
 def test_hash(sample):
@@ -287,7 +326,7 @@ def test_hash(sample):
     assert hash(istr(original)) == hash(istr(munged))
 
 
-def test_contains(sample):
+def test_contains(sample, non_strings):
     original, munged = sample
     munged_part = munged[1:-1]
     if LOG_STRINGS:
@@ -299,9 +338,12 @@ def test_contains(sample):
     assert munged_part not in original
     assert munged_part in istr(original)
     assert istr(munged_part) in istr(original)
+    for non_string in non_strings:
+        with pytest.raises(TypeError):
+            non_string in istr(original)
 
 
-def test_count(sample):
+def test_count(sample, non_strings):
     original, munged = sample
     munged_other = munged[1:-1]
     if LOG_STRINGS:
@@ -313,9 +355,12 @@ def test_count(sample):
     assert original.count(munged_other) == 0
     assert istr(original).count(munged_other) == 1
     assert istr(original).count(istr(munged_other)) == 1
+    for non_string in non_strings:
+        with pytest.raises(TypeError):
+            istr(original).count(non_string)
 
 
-def test_find(sample):
+def test_find(sample, non_strings):
     original, munged = sample
     pos = 2
     munged_other = munged[pos:-1]
@@ -328,9 +373,12 @@ def test_find(sample):
     assert original.find(munged_other) == -1
     assert istr(original).find(munged_other) == pos
     assert istr(original).find(istr(munged_other)) == pos
+    for non_string in non_strings:
+        with pytest.raises(TypeError):
+            istr(original).find(non_string)
 
 
-def test_index(sample):
+def test_index(sample, non_strings):
     original, munged = sample
     pos = 2
     munged_other = munged[pos:-1]
@@ -344,9 +392,12 @@ def test_index(sample):
         assert original.index(munged_other)
     assert istr(original).index(munged_other) == pos
     assert istr(original).index(istr(munged_other)) == pos
+    for non_string in non_strings:
+        with pytest.raises(TypeError):
+            istr(original).index(non_string)
 
 
-def test_rfind(sample):
+def test_rfind(sample, non_strings):
     original, munged = sample
     pos = 2
     munged_other = munged[pos:-1]
@@ -359,9 +410,12 @@ def test_rfind(sample):
     assert original.rfind(munged_other) == -1
     assert istr(original).rfind(munged_other) == pos
     assert istr(original).rfind(istr(munged_other)) == pos
+    for non_string in non_strings:
+        with pytest.raises(TypeError):
+            istr(original).rfind(non_string)
 
 
-def test_rindex(sample):
+def test_rindex(sample, non_strings):
     original, munged = sample
     pos = 2
     munged_other = munged[pos:-1]
@@ -375,9 +429,12 @@ def test_rindex(sample):
         assert original.rindex(munged_other)
     assert istr(original).rindex(munged_other) == pos
     assert istr(original).rindex(istr(munged_other)) == pos
+    for non_string in non_strings:
+        with pytest.raises(TypeError):
+            istr(original).rindex(non_string)
 
 
-def test_startswith(sample):
+def test_startswith(sample, non_strings):
     original, munged = sample
     munged_other = munged[:-1]
     if LOG_STRINGS:
@@ -389,9 +446,12 @@ def test_startswith(sample):
     assert not original.startswith(munged_other)
     assert istr(original).startswith(munged_other)
     assert istr(original).startswith(istr(munged_other))
+    for non_string in non_strings:
+        with pytest.raises(TypeError):
+            istr(original).startswith(non_string)
 
 
-def test_endswith(sample):
+def test_endswith(sample, non_strings):
     original, munged = sample
     munged_other = munged[1:]
     if LOG_STRINGS:
@@ -403,6 +463,9 @@ def test_endswith(sample):
     assert not original.endswith(munged_other)
     assert istr(original).endswith(munged_other)
     assert istr(original).endswith(istr(munged_other))
+    for non_string in non_strings:
+        with pytest.raises(TypeError):
+            istr(original).endswith(non_string)
 
 
 def test_casefold(sample):
