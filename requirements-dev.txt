@@ -16,7 +16,7 @@ colorama==0.4.6           # via tox
 coverage==7.4.3           # via -r requirements-dev.in
 distlib==0.3.8            # via virtualenv
 docutils==0.20.1          # via sphinx
-faker==22.2.0             # via -r requirements-dev.in
+faker==24.1.0             # via -r requirements-dev.in
 filelock==3.13.1          # via tox, virtualenv
 flake8==7.0.0             # via -r requirements-dev.in
 idna==3.6                 # via requests
