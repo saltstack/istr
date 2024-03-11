@@ -34,7 +34,7 @@ pygments==2.17.2          # via sphinx
 pyproject-api==1.6.1      # via tox
 pytest==8.1.1             # via -r requirements-dev.in
 pytest-runner==6.0.1      # via -r requirements-dev.in
-python-dateutil==2.8.2    # via faker
+python-dateutil==2.9.0.post0    # via faker
 requests==2.31.0          # via sphinx
 six==1.16.0               # via python-dateutil
 snowballstemmer==2.2.0    # via sphinx
