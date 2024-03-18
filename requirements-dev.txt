@@ -46,6 +46,6 @@ sphinxcontrib-jsmath==1.0.1  # via sphinx
 sphinxcontrib-qthelp==1.0.7  # via sphinx
 sphinxcontrib-serializinghtml==1.1.10  # via sphinx
 tox==4.14.1               # via -r requirements-dev.in
-urllib3==2.1.0            # via requests
+urllib3==2.2.1            # via requests
 virtualenv==20.25.0       # via tox
 wheel==0.42.0             # via -r requirements-dev.in
